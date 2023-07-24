@@ -1,10 +1,18 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 2,
   "name": "Stretch Reminder",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Displays a 'STRETCH' reminder every 30 minutes.",
-  "action": {
+  "permissions": ["alarms", "storage"],
+  "browser_action": {
     "default_popup": "popup.html"
   },
-  "permissions": ["alarms"]
+  "options_page": "options.html",
+  "icons": {
+    "48": "icon.png"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }
 }
